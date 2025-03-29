@@ -1,4 +1,4 @@
-export interface Player {
+export interface PlayerTeam {
     id : number;
     name : string;
     points : number;
@@ -6,4 +6,5 @@ export interface Player {
     assists : number;
     minutes : number;
     teamId : number;
+    teamName : string;
 }
