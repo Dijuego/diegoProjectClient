@@ -1,0 +1,15 @@
+<h3>Country Population</h3>
+
+@if (teamPlayers) {
+    <p>
+    <strong>{{teamPlayers.name}}:</strong><br/>
+    Player Count: {{teamPlayers.playerCount}}<br/>
+    in team
+    </p>
+}
+
+<div>
+    <a mat-flat-button color="secondary"
+        [routerLink]="['/teams']" routerLinkActive="router-link-active">Back</a>
+
+</div>

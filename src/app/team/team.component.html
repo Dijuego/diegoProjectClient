@@ -1,1 +1,28 @@
-<p>team works!</p>
+<h1>NBA Teams</h1>
+<p>Here's a list of teams: feel free to play with it.</p>
+@if (teams) {
+  <table class='table table-striped' aria-labelledby="tableLabel">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Conference</th>
+        <th>Win</th>
+        <th>Loss</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (team of teams; track team.id) {
+        <tr ngFor="let team of teams">
+          <td><a [routerLink]="['/team-players',team.id]">{{ team.id }}</a></td>
+          <td>{{ team.name }}</td>
+          <td>{{ team.conference }}</td>
+          <td>{{ team.win }}</td>
+          <td>{{ team.loss }}</td>
+        </tr>  
+      }
+    </tbody>
+  </table>
+} @else {
+  <p><em>Loading...</em></p>
+}
