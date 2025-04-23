@@ -11,5 +11,6 @@ export const routes: Routes = [
     {path:"nav-bar", component:NavBarComponent},
     {path:"team-players/:id", component:TeamPlayersComponent},
     {path:"player-team", component:PlayerTeamComponent},
+    {path:"player-team/:id", component:PlayerTeamComponent},
     {path:"", component:TeamComponent, pathMatch:"full"}
 ];

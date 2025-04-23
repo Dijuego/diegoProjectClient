@@ -1,1 +1,17 @@
-<p>player-team works!</p>
+<h2>Player Statistics</h2>
+
+@if(playerTeam){
+    <p>
+        <strong>{{playerTeam.teamName}}: {{playerTeam.name}}</strong><br/>
+        Points:   {{playerTeam.points}}<br/>
+        Rebounds: {{playerTeam.rebounds}}<br/>
+        Assists:  {{playerTeam.assists}}<br/>
+        Minutes:  {{playerTeam.minutes}}<br/>
+    </p>
+}
+
+<div>
+    <a mat-flat-button color="secondary"
+        [routerLink]="['/players']" routerLinkActive="router-link-active">Back</a>
+
+</div>

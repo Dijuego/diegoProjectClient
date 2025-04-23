@@ -2,7 +2,7 @@ export interface PlayerTeam {
     id : number;
     name : string;
     points : number;
-    rebunds : number;
+    rebounds : number;
     assists : number;
     minutes : number;
     teamId : number;

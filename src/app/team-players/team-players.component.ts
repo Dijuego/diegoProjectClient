@@ -25,7 +25,7 @@ export class TeamPlayersComponent implements OnInit{
 
   getTeamPlayers() {
     let id = this.activatedRoute.snapshot.paramMap.get('id');
-    this.http.get<TeamPlayers>(`${environment.baseUrl}api/Teams/GetTeamCount/${id}`).subscribe({
+    this.http.get<TeamPlayers>(`${environment.baseUrl}api/Teams/GetTeamPlayers/${id}`).subscribe({
       next: result => this.teamPlayers = result,
       error: error => console.error(error)
     });
