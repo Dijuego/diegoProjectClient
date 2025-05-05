@@ -5,6 +5,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { TeamPlayersComponent } from './team-players/team-players.component';
 import { PlayerTeamComponent } from './player-team/player-team.component';
 import { LoginComponent } from './auth/login.component';
+import { HomeComponent } from './home/home.component';
 
 export const routes: Routes = [
     {path:"teams", component:TeamComponent},
@@ -14,5 +15,5 @@ export const routes: Routes = [
     {path:"player-team", component:PlayerTeamComponent},
     {path:"player-team/:id", component:PlayerTeamComponent},
     {path:"login", component:LoginComponent},
-    {path:"", component:TeamComponent, pathMatch:"full"}
+    {path:"", component:HomeComponent, pathMatch:"full"}
 ];

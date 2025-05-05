@@ -24,11 +24,17 @@ export class AuthService {
     return this.http.post<LoginResponse>(url,loginRequest)
     .pipe(tap(result =>{
       if(result.success){
-        localStorage.setItem("JwtToken_NBAPlayers", result.token);
+        localStorage.setItem("JwtToken_DiegoProjNBA", result.token);
         this.setAuthStatus(true);
       }
     }));
   }
-  logout(){}
+  logout(){
+    localStorage.removeItem("JwtToken_DiegoProjNBA");
+    this.setAuthStatus(false);
+  }
 
+  isAuthenticated(): boolean {
+    return localStorage.getItem("JwtToken_DiegoProjNBA") != null;
+  }
 }
